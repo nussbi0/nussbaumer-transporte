@@ -1,0 +1,297 @@
+﻿body
+{
+    font-family: Arial, Helvetica, sans-serif;
+        margin:0;
+    padding:0;
+    font-size:13px;
+}
+
+h1 {
+    font-size:30px;
+    margin-top:0;
+}
+
+p {
+    line-height:18px;
+    margin:0 0 15px 0;
+}
+
+#wrapper {
+    margin:0;
+    padding:0;
+}
+
+#headerwrap {
+    width: 960px;
+    margin: 0 auto;
+    overflow:hidden;
+}
+
+#login {
+    float:right;
+}
+
+#breadcrumbs {
+    margin-top: 20px;
+    padding-bottom:30px;
+    color:#587683 ;
+}
+
+#pagewrap {
+	padding: 5px;
+	width: 960px;
+	margin: 0 auto;
+}
+#header {
+    background-color:#0f4f78;
+    clear:both;
+}
+#content {
+	width: 600px;
+	float: right;
+}
+#sidebar {
+	width: 300px;
+	float: left;
+    background-color: #EFF1F2;
+    border-top: 1px solid #eceff0;
+    border-bottom: 1px solid #eceff0;
+}
+#footer {
+	clear: both;
+}
+
+.nav {
+      width: 960px;
+  margin: 0 auto;
+  padding:0;
+  overflow:hidden;
+  font-weight:bold;
+}
+
+    .nav li {
+        list-style:none;
+        margin:0;
+        float:left;
+        padding: 15px 11px;
+        color: #ececec;
+    }
+
+        .nav li:first-child {
+            padding: 15px 11px 15px 0;
+        }
+
+    /*Style 'show menu' label button and hide it by default*/
+.show-menu {
+	text-decoration: none;
+	color: #fff;
+	background: #0f4f78;
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ .nav{
+    display: block;
+}
+
+#sidebar ul {
+    padding:0;
+    margin: 0;
+}
+
+
+#sidebar li {
+    border-top: 1px solid #d8dee0;
+    list-style: none;
+    padding: 10px;
+}
+
+#sidebar li:first-child {
+    border-top: none;
+}
+
+
+@media (max-width: 991px) {
+    body {
+        font-size:15px;
+    }
+
+    #content {
+		width: auto;
+		float: none;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+
+    .show-menu {
+        padding: 1em 0;
+    }
+
+    #breadcrumbs {
+    margin-top: 20px;
+    padding-bottom:5px;
+}
+
+        .nav {
+		position: static;
+		display: none;
+
+	}
+
+	.nav li {
+		margin-bottom: 1px;
+        float:none;
+	}
+
+    .nav li:first-child {
+            padding: 15px 11px;
+        }
+
+	.nav ul li, li a {
+		width: 100%;
+	}
+
+    .show-menu {
+		display:block;
+	}
+}
+
+ /*Smartphones (iPhone portrait and landscape) 
+@media only screen and (min-width: 320px) and (max-width: 480px){ 
+    html {
+         font-size: 60% is the default now 
+    }
+}
+
+
+ Small Devices, Tablets 
+@media only screen and (min-width : 768px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+ Medium Devices, Desktops 
+@media only screen and (min-width : 992px) {
+    #content {
+		width: auto;
+		float: none;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+
+    #breadcrumbs {
+    margin-top: 5px;
+    padding-bottom:5px;
+}
+
+        .nav {
+		position: static;
+		display: none;
+
+	}
+
+	.nav li {
+		margin-bottom: 1px;
+        float:none;
+	}
+
+	.nav ul li, li a {
+		width: 100%;
+	}
+
+    .show-menu {
+		display:block;
+	}
+}
+
+ Large Devices, Wide Screens 
+@media only screen and (min-width : 1200px) {
+    html {
+        font-size: 200%;
+    }
+}*/
+
+
+ /*for 980px or less 
+@media screen and (max-width: 980px) {
+	
+	#pagewrap {
+		width: 94%;
+	}
+	#content {
+		width: 65%;
+	}
+	#sidebar {
+		width: 30%;
+	}
+
+}
+
+ for 700px or less 
+@media screen and (max-width: 760px) {
+
+	#content {
+		width: auto;
+		float: none;
+	}
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+
+    #breadcrumbs {
+    margin-top: 5px;
+    padding-bottom:5px;
+}
+
+        .nav {
+		position: static;
+		display: none;
+
+	}
+
+	.nav li {
+		margin-bottom: 1px;
+        float:none;
+	}
+
+	.nav ul li, li a {
+		width: 100%;
+	}
+
+    .show-menu {
+		display:block;
+	}
+
+}
+
+ for 480px or less 
+@media screen and (max-width: 480px) {
+
+	#header {
+		height: auto;
+	}
+	h1 {
+		font-size: 24px;
+	}
+	#sidebar {
+		display: none;
+	}
+
+    #breadcrumbs {
+        display:none;
+    }
+
+}**/
