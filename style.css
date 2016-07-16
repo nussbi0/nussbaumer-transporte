@@ -1,333 +1,365 @@
-﻿body
-{
-    font-family: Arial, Helvetica, sans-serif;
-        margin:0;
-    padding:0;
-    font-size:13px;
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0b1 | 201101 
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+ 
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+ 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-h1 {
-    font-size:30px;
-    margin-top:0;
+/*begin our styles*/
+ 
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
 }
 
-p {
-    line-height:18px;
-    margin:0 0 15px 0;
+a {
+  color: #fff;
 }
 
-#wrapper {
-    margin:0;
-    padding:0;
+
+/* header */
+
+.header {
+
+  /*position: fixed;*/
+  width: 100%;
+  z-index: 3;
 }
 
-#headerwrap {
-    width: 960px;
-    margin: 0 auto;
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #355c90;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  /*border-right: 1px solid #f4f4f4;*/
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #2b4971;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.logo img {
+    height:38px;
+}
+
+.subnav {
+    padding:10px 5px;
     overflow:hidden;
 }
 
-#login {
-    float:right;
+.submenu a{
+    color:#333;
+    text-decoration:none;
+    font-size:0.9em;
 }
 
-#breadcrumbs {
-    margin-top: 20px;
-    padding-bottom:30px;
-    color:#587683 ;
+.subnav ul {
+    overflow:auto;
 }
 
-#pagewrap {
-	padding: 5px;
-	width: 960px;
-	margin: 0 auto;
-}
-#header {
-    background-color:#0f4f78;
-    clear:both;
-}
-#content {
-	width: 600px;
-	float: right;
-}
-#sidebar {
-	width: 300px;
-	float: left;
-    background-color: #EFF1F2;
-    border-top: 1px solid #eceff0;
-    border-bottom: 1px solid #eceff0;
-}
-#footer {
-    background-color: #ececec;
-	clear: both;
-    padding:20px 0;
+.submenu li {
+    white-space:nowrap;
 }
 
-#footer ul {
-    font-weight: normal;
-        margin:0;
-    padding:0;
+.submenu li a{
+    float:left;
+    padding: 10px 20px;
 }
 
-#footer li {
-    list-style: none;
-
+.submenu li a:hover{
+    background-color: rgba(0,0,0,.1);
 }
 
-.nav , #inner-footer{
-      width: 960px;
-  margin: 0 auto;
-  padding:0;
-  overflow:hidden;
-  font-weight:bold;
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
 }
 
-    .nav li {
-        list-style:none;
-        margin:0;
+.header-container {
+  background-color: #355c90;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
+
+/* Footer */
+.footer-header {
+    background-color:#403531;
+}
+
+.footer-container {
+    margin: 0 auto;
+    color:#d4dbdd;
+}
+
+.footer, .footer-header {
+        padding: 20px 20px;
+}
+
+.footer {
+    background-color:#4b3e39;
+    overflow:hidden;
+    font-size:0.9em;
+}
+
+    .footer .left {
         float:left;
-        padding: 15px 11px;
-        color: #ececec;
     }
 
-        .nav li:first-child {
-            padding: 15px 11px 15px 0;
-        }
+    .footer .right {
+        float:right;
+    }
+    
+    .footer .left, .footer .right {
+        width:50%;
+    }
 
-    /*Style 'show menu' label button and hide it by default*/
-.show-menu {
-	text-decoration: none;
-	color: #fff;
-	background: #0f4f78;
-	text-align: center;
-	padding: 10px 0;
-	display: none;
-}
+    .footer p {
+        line-height:2em;
+    }
 
-/*Hide checkbox*/
-input[type=checkbox]{
-    display: none;
-}
-
-/*Show menu when invisible checkbox is checked*/
-input[type=checkbox]:checked ~ .nav{
-    display: block;
-}
-
-#sidebar ul {
-    padding:0;
-    margin: 0;
-}
+    .footer-header h4 {
+        font-weight:bold;
+        font-size:1.2em;
+    }
 
 
-#sidebar li {
-    border-top: 1px solid #d8dee0;
-    list-style: none;
-    padding: 10px;
-}
 
-#sidebar li:first-child {
-    border-top: none;
-}
+/* 48em = 768px */
 
-.left {
+@media (min-width: 48em) {
+  .header li {
     float: left;
-    width: 200px;
-}
-
-.right {
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
     float: right;
-    width: 200px;
-}
+    max-height: none;
+  }
+    .header {
+        overflow:hidden;
+    }
+  .header .menu-icon {
+    display: none;
+  }
 
-.center {
-    margin:0 auto;
-    width: 200px;
-}
-
-.headerimg {
-      width: 100%;
-  height: 150px;
-object-fit: none; /* Do not scale the image */
-  object-position: center; /* Center the image within the element */
-  margin-bottom: 10px;
-}
-
-
-@media (max-width: 991px) {
-    body {
-        font-size:15px;
+    .subnav {
+        clear:both;
     }
 
-    #content {
-		width: auto;
-		float: none;
-	}
-	#sidebar {
-		width: auto;
-		float: none;
-	}
+    .header, .subnav, .footer-content, .footer-header-content {
+    margin: 0 auto;
+    /*max-width:1400px;*/
+}
 
-    .show-menu {
-        padding: 1em 0;
+}
+
+/* Content */
+
+.content-container {
+    margin-bottom:20px;
+    padding: 0 20px;
+}
+
+.tile {
+    padding:20px;
+    background-color:#e9eef2;
+    margin-top:10px;
+    border-bottom: 1px solid #d4dbdd;
+}
+
+    .tile img {
+        width:100%;
+        margin:15px 0;
     }
 
-    #breadcrumbs {
-    margin-top: 20px;
-    padding-bottom:5px;
-}
-
-        .nav {
-		position: static;
-		display: none;
-
-	}
-
-	.nav li {
-		margin-bottom: 1px;
-        float:none;
-	}
-
-    .nav li:first-child {
-            padding: 15px 11px;
-        }
-
-	.nav ul li, li a {
-		width: 100%;
-	}
-
-    .show-menu {
-		display:block;
-	}
-}
-
- /*Smartphones (iPhone portrait and landscape) 
-@media only screen and (min-width: 320px) and (max-width: 480px){ 
-    html {
-         font-size: 60% is the default now 
+    .tile a {
+        color:#333;
+        text-decoration:none;
     }
-}
 
-
- Small Devices, Tablets 
-@media only screen and (min-width : 768px) {
-    html {
-        font-size: 90%;
+    .tile .tile-title {
+        font-size:.9em;
+        font-weight:bold;
     }
-}
 
- Medium Devices, Desktops 
-@media only screen and (min-width : 992px) {
-    #content {
-		width: auto;
-		float: none;
-	}
-	#sidebar {
-		width: auto;
-		float: none;
-	}
-
-    #breadcrumbs {
-    margin-top: 5px;
-    padding-bottom:5px;
-}
-
-        .nav {
-		position: static;
-		display: none;
-
-	}
-
-	.nav li {
-		margin-bottom: 1px;
-        float:none;
-	}
-
-	.nav ul li, li a {
-		width: 100%;
-	}
-
-    .show-menu {
-		display:block;
-	}
-}
-
- Large Devices, Wide Screens 
-@media only screen and (min-width : 1200px) {
-    html {
-        font-size: 200%;
+    .tile p {
+        font-size: .8em;
+        line-height: 1.5em;
     }
+
+/* section */
+
+/*.section {
+  overflow: hidden;
+  margin: auto;
+  max-width: 1400px;
+}
+
+.section a {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.section a img {
+  width: 100%;
+  display: block;
+}
+
+.section a span {
+  color: #fff;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  font-size: 2em;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.section-split a span {
+  display: none;
+}
+
+.section-split a:hover span {
+  display: block;
 }*/
-
-
- /*for 980px or less 
-@media screen and (max-width: 980px) {
-	
-	#pagewrap {
-		width: 94%;
-	}
-	#content {
-		width: 65%;
-	}
-	#sidebar {
-		width: 30%;
-	}
-
-}
-
- for 700px or less 
-@media screen and (max-width: 760px) {
-
-	#content {
-		width: auto;
-		float: none;
-	}
-	#sidebar {
-		width: auto;
-		float: none;
-	}
-
-    #breadcrumbs {
-    margin-top: 5px;
-    padding-bottom:5px;
-}
-
-        .nav {
-		position: static;
-		display: none;
-
-	}
-
-	.nav li {
-		margin-bottom: 1px;
-        float:none;
-	}
-
-	.nav ul li, li a {
-		width: 100%;
-	}
-
-    .show-menu {
-		display:block;
-	}
-
-}
-
- for 480px or less 
-@media screen and (max-width: 480px) {
-
-	#header {
-		height: auto;
-	}
-	h1 {
-		font-size: 24px;
-	}
-	#sidebar {
-		display: none;
-	}
-
-    #breadcrumbs {
-        display:none;
-    }
-
-}**/

@@ -1,89 +1,117 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+﻿<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="theme-color" content="#0f4f78">
-    <title>nussbi</title>
-    <link type="text/css" rel="stylesheet" href="style.css" />
+
+    <meta charset="utf-8">
+    <title>PNT Mobile First</title>
+    <meta name="description" content="CSS only mobile first navigation">
+    <meta name="author" content="Ian Yates">
+
+    <!--Mobile specific meta goodness :)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="theme-color" content="#355c90">
+
+    <!--css-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="favicon-32x32.png">
+
 </head>
 
-<body>
-    <div id="wrapper">
-        <!--<div id="headerwrap">
-            <div id="login">
-                <p>login</p>
-            </div>
-        </div>-->
-        <div id="header">
-            <label for="show-menu" class="show-menu">Menu</label>
-            <input type="checkbox" id="show-menu" role="button">
-            <ul class="nav">
-                <li>Home</li>
-                <li>About</li>
-                <li>More</li>
-                <li>Fourth</li>
-                <li>Fifth</li>
+<body id="home">
+    <div class="header-container">
+        <header class="header">
+            <a href="/" class="logo"><img src="logo.png" /></a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a href="#work">Unser Angebot</a></li>
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#careers">Fotos</a></li>
+                <li><a href="#contact">Kontakt</a></li>
             </ul>
-        </div>
-        <div id="pagewrap">
-            <div id="breadcrumbs">Home > Irgendwas > noch weiter</div>
-            <div id="headerimage"><img class="headerimg" src="http://lorempixel.com/960/400/city" /></div>
-            <div id="sidebar">
-                <!--<h2>Sidebar</h2>-->
-                <ul>
-                    <li>link 1</li>
-                    <li>link 2</li>
-                    <li>link 3</li>
-                </ul>
-            </div>
-            <div id="content">
-                <h1>Headline</h1>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor
-                    sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-                    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                    sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-                    eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
-                    zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing
-                    elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
-            </div>
+        </header>
+    </div>
 
+    <!--<nav class="subnav">
+        <ul class="submenu">
+            <li><a href="#work">Muldentransport</a></li>
+            <li><a href="#about">Kranarbeiten</a></li>
+            <li><a href="#careers">Abladedepot</a></li>
+            <li><a href="#contact">Sonstige Transporte</a></li>
+        </ul>
+    </nav>-->
+
+    <div class="content-container">
+        <div class="tile">
+            <a href="#">
+                <span class="tile-title">New Website coming soon</span>
+                <img src="header.jpg" alt="" />
+                <p>
+                    This is the new Wesite for Nussbaumer Transporte AG. Lsed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                    erat, sed diam voluptua
+                </p>
+            </a>
         </div>
-        <div id="footer">
-            <div id="inner-footer">
+        <div class="tile">
+            <a href="#">
+                <span class="tile-title">New Website coming soon</span>
+                <img src="header.jpg" alt="" />
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua
+                </p>
+            </a>
+        </div>
+        <div class="tile">
+            <a href="#">
+                <span class="tile-title">New Website coming soon</span>
+                <img src="header.jpg" alt="" />
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                    aliquyam erat, sed diam voluptua
+                </p>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer-header">
+            <div class="footer-header-content">
+                <h4>Kontakt</h4>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-content">
                 <div class="left">
-                    <p>Kontakt</p>
-                    <ul>
-                        <li>P.Nussbaumer Transporte AG</li>
-                        <li>Im Hirshalm 6</li>
-                        <li>CH- 4125 Riehen</li>
-                    </ul>
+                    <p>
+                        Peter Nussbaumer Transporte AG
+                    </p>
+                    <p>
+                        Freulerstrasse
+                    </p>
+                    <p>
+                        4125 Birsfelden
+                    </p>
                 </div>
                 <div class="right">
-                    <p>Info</p>
-                    <ul>
-                        <li>bli</li>
-                        <li>bla</li>
-                        <li>blu</li>
-                    </ul>
-                </div>
-                <div class="center">
-                    <p>Über uns</p>
-                    <ul>
-                        <li>noch was</li>
-                        <li>ein nächstes item</li>
-                        <li>und noch eins</li>
-                    </ul>
+                    <p>
+                        Tel. 071 123 29 98
+                    </p>
+                    <p>
+                        Fax: 093 344 95 09
+                    </p>
+                    <p>
+                        Mail: info@nussbaumer-transporte.ch
+                    </p>
                 </div>
             </div>
-        </div>
+        </footer>
     </div>
 </body>
 
