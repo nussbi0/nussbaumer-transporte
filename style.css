@@ -60,7 +60,7 @@ table {
  
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: #f4f4f4;
 }
 
@@ -83,7 +83,7 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #355c90;
+  background-color: #18456F;
 }
 
 .header li a {
@@ -102,12 +102,12 @@ a {
   display: block;
   float: left;
   font-size: 2em;
-  padding: 10px 20px;
+  padding: 19px 20px;
   text-decoration: none;
 }
 
 .logo img {
-    height:38px;
+    height:20px;
 }
 
 .subnav {
@@ -144,11 +144,23 @@ a {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
 }
 
 .header-container {
-  background-color: #355c90;
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  background-color: #18456F;
+    box-shadow: 0px 2px 4px 0 rgba(0,0,0,.4);
+}
+
+.header h2 {
+    color: #fff;
+    float: left;
+    padding: 21px 60px;
+}
+
+.state {
+    display: block;
 }
 
 /* menu icon */
@@ -257,12 +269,13 @@ a {
 
     .footer-header h4 {
         font-weight:bold;
-        font-size:1.2em;
+        /* font-size:1.2em; */
     }
 
 
 
-/* 48em = 768px */
+/* 48em = 768px Desktop size */
+
 
 @media (min-width: 48em) {
   .header li {
@@ -290,11 +303,18 @@ a {
     .header, .subnav, .footer-content, .footer-header-content {
     margin: 0 auto;
     /*max-width:1400px;*/
-}
+    }
 
+    .state {
+        display: none;
+    }
 }
 
 /* Content */
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+}
 
 .content-container {
     margin-bottom:20px;
@@ -319,7 +339,7 @@ a {
     }
 
     .tile .tile-title {
-        font-size:.9em;
+        /* font-size:.9em; */
         font-weight:bold;
     }
 
