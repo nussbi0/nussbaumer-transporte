@@ -17,9 +17,6 @@
     <!--css-->
     <link rel="stylesheet" href="style.css">
 
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     <!-- Favicons-->
     <link rel="shortcut icon" href="favicon-32x32.png">
 
@@ -28,79 +25,81 @@
 <body id="home">
     <div class="header-container">
         <header class="header">
-            <a href="./index.html" class="logo"><img src="logo.png" /></a>
-            <h2 class="state"><a href="./index.html">Home</a></h2>
+            <a href="./index.html" class="logo">
+                <img src="logo.png" />
+            </a>
+            <h2 class="state">
+                <a href="./index.html">Home</a>
+            </h2>
             <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <label class="menu-icon" for="menu-btn">
+                <span class="navicon"></span>
+            </label>
             <ul class="menu">
-                <li><a href="#work">Unser Angebot</a></li>
-                <li><a href="#about">Über uns</a></li>
-                <li><a href="#careers">Fotos</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li>
+                    <a href="#work">Unser Angebot</a>
+                </li>
+                <li>
+                    <a href="#about">Über uns</a>
+                </li>
+                <li>
+                    <a href="#fotos">Fotos</a>
+                </li>
+                <li>
+                    <a href="#contact">Kontakt</a>
+                </li>
             </ul>
         </header>
     </div>
-
-    <!--<nav class="subnav">
-        <ul class="submenu">
-            <li><a href="#work">Muldentransport</a></li>
-            <li><a href="#about">Kranarbeiten</a></li>
-            <li><a href="#careers">Abladedepot</a></li>
-            <li><a href="#contact">Sonstige Transporte</a></li>
-        </ul>
-    </nav>-->
-
     <div class="content-container">
-        <div class="tile">
-            <a href="#">
-                <span class="tile-title"><h3>New Website coming soon</h3></span>
-                <img src="header.jpg" alt="" />
-                <p>
-                    This is the new Wesite for Nussbaumer Transporte AG. Lsed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                    erat, sed diam voluptua
-                </p>
-            </a>
+        <div id="header_image">
+            <img class="blur" src="image.png" />
+            <!-- <div class="header_image-text">Muldentransporte, Kranarbeite, Spezialtransporte</div> -->
         </div>
-        <div class="tile">
-            <a href="#">
-                <span class="tile-title"><h3>New Website coming soon</h3></span>
-                <img src="header.jpg" alt="" />
-                <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua
-                </p>
-            </a>
-        </div>
-        <div class="tile">
-            <a href="#">
-                <span class="tile-title"><h3>New Website coming soon</h3></span>
-                <img src="header.jpg" alt="" />
-                <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua
-                </p>
-            </a>
+        <div class="content_padding">
+            <div id="work">
+                <h1>Unser Angebot</h1>
+                <div class="content">
+                    <h3>Kranwagen</h3>
+                    <img src="kran.png" />
+                    <p class="description"></p>
+                    <ul>
+                        <li>Dreiachser mit Kran</li>
+                        <li>Reichweite: 20m</li>
+                        <li>Gewicht: 100kg bei 20m</li>
+                        <li>Ladegewicht: 5t</li>
+                        <li>Einsatzbeispiele: Loses Material, Piano aus 3. St., Steine platzieren</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="about">
+                <h1>Über uns</h1>
+            </div>
+            <div id="fotos">
+                <h1>Fotos</h1>
+            </div>
         </div>
     </div>
-
     <div class="footer-container">
         <div class="footer-header">
             <div class="footer-header-content">
                 <h4>Kontakt</h4>
             </div>
         </div>
-        <footer class="footer">
+        <footer class="footer" id="contact">
             <div class="footer-content">
                 <div class="left">
-                    <p>
-                        Peter Nussbaumer Transporte AG
-                    </p>
-                    <p>
-                        Freulerstrasse
-                    </p>
-                    <p>
-                        4125 Birsfelden
-                    </p>
+                    <a href="https://goo.gl/maps/3dmvi5Kdn4F2">
+                        <p>
+                            Peter Nussbaumer Transporte AG
+                        </p>
+                        <p>
+                            Freulerstrasse
+                        </p>
+                        <p>
+                            4125 Birsfelden
+                        </p>
+                    </a>
                 </div>
                 <div class="right">
                     <p>
@@ -110,7 +109,7 @@
                         Fax: 093 344 95 09
                     </p>
                     <p>
-                        Mail: info@nussbaumer-transporte.ch
+                        <a href="mailto:info@nussbaumer-transporte.ch">info@nussbaumer-transporte.ch</a>
                     </p>
                 </div>
             </div>

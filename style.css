@@ -58,10 +58,11 @@ table {
 
 /*begin our styles*/
  
-body {
+body, h3 {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   background-color: #f4f4f4;
+  color:#333;
 }
 
 a {
@@ -243,10 +244,16 @@ a {
 .footer-container {
     margin: 0 auto;
     color:#d4dbdd;
+    font-size: .9em;
+}
+
+.footer-container a{
+    /* text-decoration: none; */
+    color:#d4dbdd;
 }
 
 .footer, .footer-header {
-        padding: 20px 20px;
+        padding: 12px 20px;
 }
 
 .footer {
@@ -256,7 +263,9 @@ a {
 }
 
     .footer .left {
+        box-sizing: border-box;
         float:left;
+        padding-right: 5px;
     }
 
     .footer .right {
@@ -272,7 +281,7 @@ a {
     }
 
     .footer-header h4 {
-        font-weight:bold;
+        /* font-weight:bold; */
         /* font-size:1.2em; */
     }
 
@@ -316,14 +325,74 @@ a {
 
 /* Content */
 
-h1, h2, h3, h4, h5 {
+h1, h2, {
     font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #18456F;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#header_image{
+    /* position: relative; */
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.blur {
+    /* filter: blur(3px); */
+}
+
+.header_image-text{
+    position: absolute;
+    top: 50%;
+    right:12px;
+    font-size: 1.5em;
+}
+
+.content_padding {
+    padding: 0 20px;
 }
 
 .content-container {
     margin-bottom:20px;
-    padding: 0 20px;
-    margin-top: 70px;
+    margin-top: 55px;
+}
+
+.content-container .content {
+    margin-bottom: 30px;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+.content-container .content p, li{
+    font-size: .9em;
+}
+
+.content-container .content li{
+    list-style-type: disc;
+}
+
+.content-container .content ul{
+    padding-left: 1em;
+}
+
+.content-container p {
+    font-size: 12px;
+}
+
+.content-container img {
+    width:100%;
+    margin-bottom: 10px;
 }
 
 .tile {
