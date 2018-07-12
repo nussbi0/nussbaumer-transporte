@@ -347,10 +347,10 @@ h3 {
     color: #fff;
     margin-bottom: 10px;
 }
-
+/* 
 .blur {
-    /* filter: blur(3px); */
-}
+    filter: blur(3px);
+} */
 
 .header_image-text{
     position: absolute;
